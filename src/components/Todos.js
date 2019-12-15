@@ -7,7 +7,8 @@ const Todos = (props) => {
 			<Todo
 				key={todo._id}
 				todo={todo} 
-				deleteTodo={props.deleteTodo}/>
+				deleteTodo={props.deleteTodo}
+				updateTodo={props.updateTodo} />
 		);
 	});
 	return (
@@ -18,3 +19,4 @@ const Todos = (props) => {
 };
 
 export default Todos;
+

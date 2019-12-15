@@ -22,12 +22,12 @@ class CreateTodoForm extends Component {
 
 	render() {
 		return (
-			<div>
+			<div style={this.props.style} className='todoForm'>
 				<form onSubmit = {this.onFormSubmit} id="taskForm">
 					<input
 						onChange={this.onInputChange}
 						type="text" id="newItemDescription"
-						placeholder="What do you need to do?"
+						placeholder="Write a todo here"
 						value={this.state.todo}
 						/>
 					<button type="submit" id="addTask" className="btn">Add Todo</button>
