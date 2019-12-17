@@ -30,10 +30,10 @@ class TodosContainer extends Component {
 		}
 
 		TodoModel.create(newTodo).then((res) => {
-			let todos = this.state.todos;
-			todos.push(res);
-			this.setState({todos: todos});
-		});
+			let todos = this.state.todos
+			todos.push(res)
+			this.setState({todos: todos})
+		})
 	}
 
 	deleteTodo = (todo) => {
@@ -53,14 +53,16 @@ class TodosContainer extends Component {
 		TodoModel.update(todo)
 			.then(date => {
 				let todos = this.state.todos;
-				todos.find(isUpdatedTodo).body = todo.body;
-				this.setState({todos});
+				console.log('todo', todo)
+				console.log(todos.find(isUpdatedTodo))
+				//todos.find(isUpdatedTodo).body = todo.body;
+				//this.setState({todos});
 			})
 	}
 
 	render() {
 		return (
-			<div className='todosComponent'>
+			<div className='todosContainer'>
 				<CreateTodoForm
 					createTodo = {this.createTodo} 
 				/>

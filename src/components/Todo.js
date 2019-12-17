@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import CreateTodoForm from './CreateTodoForm'
+import TodoForm from './TodoForm'
 
 class Todo extends Component {
 
@@ -35,7 +35,7 @@ class Todo extends Component {
 						Remove
 					</span>
 				</div>
-				<CreateTodoForm 
+				<TodoForm 
 					todo={this.props.todo}
 					style={this.state.formStyle}
 					autoFocus={true}
